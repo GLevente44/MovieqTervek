@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció - Movieq</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="icon"type="image/png" href="../img/logo.png">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg bg-black">
+    <div class="container-fluid">
+
+        <!-- REGISZTRÁCIÓ - BAL OLDAL -->
+        <a class="navbar-brand" href="#">
+            <img src="../img/logo.png"alt="Movieq"id="logo"style="background-color: white;">
+        </a>
+
+        <!-- Középső rész -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+
+                <li class="nav-item ms-3">
+                    <a class="nav-link active text-white fs-5" href="../html/fooldal.html">Főoldal</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white fs-5"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">☰ Menü</a>   
+                </li>
+
+                <!-- Kereső -->
+                <form class="d-flex ms-3" role="search">
+                    <input class="form-control me-2 fs-5"type="search"placeholder="Keresés..."aria-label="Search">
+
+                    <button class="btn btn-outline-light" type="submit">
+                        &#128270;
+                    </button>
+                </form>
+
+            </ul>
+        </div>
+
+        <!-- LOGO - JOBB OLDAL -->
+        <div>
+            <i class="bi bi-person-fill text-white fs-5" style="display: inline;"></i>
+            <a class="nav-link fw-bold text-white fs-5" style="display: inline;" href="#signin.html">Regisztráció</a>
+        </div>
+
+    </div>
+</nav>
+
+
+    <div id="left-content">
+            <h1 id="signin-text">Movie<span style="color: yellow;">q</span></h1>
+            
+            <h2 id="signin-text2">Üdvözlünk a Movieq-n!</h2>
+
+            <p id="signin-text3">Hozz létre egy fiókot, hogy nyomon követhesd kedvenc filmjeidet, sorozataidat, értékeléseidet és még több izgalmas funkciót használhass!</p>
+
+            <div style="color: white; margin-left: 25px; margin-bottom: 25px;">
+                <i class="bi bi-film fs-4" style="display: inline; color: yellow;"></i>
+                <h3 style="display: inline; font-size: 25px;">Kedvenc filmjeid nyomon <span style="margin-left: 30px;">követése</span></h3>
+            </div>
+
+            <div style="color: white; margin-left: 25px; margin-bottom: 25px;">
+                <i class="bi bi-star fs-4" style="display: inline; color: yellow;"></i>
+                <h3 style="display: inline; font-size: 25px;">Értékelések és listák készítése</h3>
+            </div>
+            <div style="color: white; margin-left: 25px; margin-bottom: 25px;">
+                <i class="bi bi-heart fs-4" style="display: inline; color: yellow;"></i>
+                <h3 style="display: inline; font-size: 25px;">Személyre szabott ajánlások</h3>
+            </div>
+
+            <div id="bottom-text">
+                <p>A mozi nem csak egy hobbi, </p>
+                <p>hanem egy életérzés</p>
+            </div>
+    </div>
+
+
+
+    <div id="right-content">
+        <div style="text-align: center;">
+            <i class="bi bi-person-circle" style="color: yellow; font-size: 50px; "></i>
+            <h1 style="color: white;">Regisztráció</h1><br>
+            <p style="color: white; font-size: 18px; font-style: italic;">Töltsd ki az alábbi űrlapot és csatlakozz a Movieq közösségéhez!</p>
+        </div>
+
+        <div id="urlap">
+            <form action="">
+                <i class="bi bi-person fs-5" style="color: white;"></i>
+                <label for="" class="label fs-5">Felhasználónév</label><br>
+                <input type="text" placeholder=" Válassz egy felhasználónevet" class="input">
+                <br><br>
+                <i class="bi bi-envelope fs-5" style="color: white;"></i>
+                <label for="" class="label fs-5">E-mail cím</label><br>
+                <input type="email" placeholder=" Írj be egy e-mail címet" class="input">
+                <br><br>
+                <i class="bi bi-shield-lock fs-5" style="color: white;"></i>
+                <label for="" class="label fs-5">Jelszó</label><br>
+                <input type="text" placeholder=" Adj meg egy jelszót" class="input">
+                <br><br>
+                <i class="bi bi-shield-lock-fill fs-5" style="color: white;"></i>
+                <label for="" class="label fs-5">Jelszó újra</label><br>
+                <input type="text" placeholder=" Írd be újra a jelszavad" class="input">
+                <br><br><br>
+                <div><button type="button" id="signin-btn" class="btn" style="background-color: yellow;"><i class="bi bi-person-fill-add fs-5"></i> Regisztráció</button></div>
+                <br><br>
+                <p style="text-align: center; color: white;">Van már fiókod? <a href="" style="color: yellow;">Bejelentkezés</a></p>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
