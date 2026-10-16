@@ -73,8 +73,7 @@ body {
 }
 
 .movie-card .card {
-    min-height: 250px;
-    background-size: cover;
+    height: 250px;
     background-position: center;
 }
 
@@ -107,7 +106,7 @@ body {
 }
 
 .slider-button:hover {
-    background-color: white;
+    color: white;
     transform: scale(1.1);
 }
 
@@ -116,11 +115,16 @@ body {
     gap: 50px;
 }
 
-a:hover{
-    transition-duration: 0.1s;
-    box-shadow: 0 0 11px 0 rgb(228, 224, 9);
-    background-color: #242424;
+.liHover:hover {
+    transition: 0.5s;
+    background-color: rgb(36, 36, 36);
+    border-radius: 15%;
+    margin: 15px;
+}
 
+.kartyakImg{
+    width: 150px;
+    height: 250px;
 }
 
 
