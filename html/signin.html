@@ -16,8 +16,8 @@
     <div class="container-fluid">
 
         <!-- REGISZTRÁCIÓ - BAL OLDAL -->
-        <a class="navbar-brand" href="#">
-            <img src="../img/logo.png"alt="Movieq"id="logo"style="background-color: white;">
+        <a class="navbar-brand" href="../html/fooldal.html">
+            <img src="../img/logo.png"alt="Movieq"id="logo"style="background-color: black;">
         </a>
 
         <!-- Középső rész -->
@@ -26,11 +26,11 @@
             <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
 
                 <li class="nav-item ms-3">
-                    <a class="nav-link active text-white fs-5" href="../html/fooldal.html">Főoldal</a>
+                    <a class="nav-link active text-white fs-5 liHover" href="../html/fooldal.html">Főoldal</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-white fs-5"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">☰ Menü</a>   
+                    <a class="nav-link text-white fs-5 liHover"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">☰ Menü</a>   
                 </li>
 
                 <!-- Kereső -->
@@ -46,7 +46,7 @@
         </div>
 
         <!-- LOGO - JOBB OLDAL -->
-        <div>
+        <div class="liHover">
             <i class="bi bi-person-fill text-white fs-5" style="display: inline;"></i>
             <a class="nav-link fw-bold text-white fs-5" style="display: inline;" href="#signin.html">Regisztráció</a>
         </div>
@@ -84,38 +84,106 @@
 
 
 
-    <div id="right-content">
-        <div style="text-align: center;">
-            <i class="bi bi-person-circle" style="color: yellow; font-size: 50px; "></i>
-            <h1 style="color: white;">Regisztráció</h1><br>
-            <p style="color: white; font-size: 18px; font-style: italic;">Töltsd ki az alábbi űrlapot és csatlakozz a Movieq közösségéhez!</p>
-        </div>
+    <!-- REGISZTRÁCIÓS SZÖVEG -->
+    
+<div id="right-content">
 
-        <div id="urlap">
+    <!-- REGISZTRÁCIÓS SZÖVEG -->
+    <div id="regisztracio-szoveg" style="text-align: center;">
+        <i class="bi bi-person-circle"
+           style="color: yellow; font-size: 50px;"></i>
+
+        <h1 style="color: white;">Regisztráció</h1>
+        <br>
+
+        <p style="color: white; font-size: 18px; font-style: italic;">Töltsd ki az alábbi űrlapot és csatlakozz a Movieq közösségéhez!</p>
+    </div>
+
+    <!-- BEJELENTKEZÉSI SZÖVEG -->
+    <div id="bejelentkezes-szoveg"
+         style="text-align: center; display: none;">
+
+        <i class="bi bi-box-arrow-in-right"
+           style="color: yellow; font-size: 50px;"></i>
+
+        <h1 style="color: white;">Bejelentkezés</h1>
+        <br>
+
+        <p style="color: white; font-size: 18px; font-style: italic;">Jelentkezz be a fiókodba, és folytasd a Movieq felfedezését!
+        </p>
+    </div>
+
+
+
+
+
+        
+    <div id="urlap" class="form-container">
+
+        <!-- REGISZTRÁCIÓ -->
+        <div id="regisztracio" class="form-box">
             <form action="">
+
                 <i class="bi bi-person fs-5" style="color: white;"></i>
-                <label for="" class="label fs-5">Felhasználónév</label><br>
+                <label class="label fs-5">Felhasználónév</label><br>
                 <input type="text" placeholder=" Válassz egy felhasználónevet" class="input">
                 <br><br>
+
                 <i class="bi bi-envelope fs-5" style="color: white;"></i>
-                <label for="" class="label fs-5">E-mail cím</label><br>
+                <label class="label fs-5">E-mail cím</label><br>
                 <input type="email" placeholder=" Írj be egy e-mail címet" class="input">
                 <br><br>
+
                 <i class="bi bi-shield-lock fs-5" style="color: white;"></i>
-                <label for="" class="label fs-5">Jelszó</label><br>
-                <input type="text" placeholder=" Adj meg egy jelszót" class="input">
+                <label class="label fs-5">Jelszó</label><br>
+                <input type="password" placeholder=" Adj meg egy jelszót" class="input">
                 <br><br>
+
                 <i class="bi bi-shield-lock-fill fs-5" style="color: white;"></i>
-                <label for="" class="label fs-5">Jelszó újra</label><br>
-                <input type="text" placeholder=" Írd be újra a jelszavad" class="input">
+                <label class="label fs-5">Jelszó újra</label><br>
+                <input type="password" placeholder=" Írd be újra a jelszavad" class="input">
                 <br><br><br>
-                <div><button type="button" id="signin-btn" class="btn" style="background-color: yellow;"><i class="bi bi-person-fill-add fs-5"></i> Regisztráció</button></div>
+
+                <div>
+                    <button type="button" id="signin-btn" class="btn"style="background-color: yellow;"><i class="bi bi-person-fill-add fs-5"></i>Regisztráció</button>
+                </div>
+
                 <br><br>
-                <p style="text-align: center; color: white;">Van már fiókod? <a href="" style="color: yellow;">Bejelentkezés</a></p>
+
+                <p style="text-align: center; color: white;">Van már fiókod? <a href="#" id="bejelentkezesLink" style="color: yellow;">Bejelentkezés</a></p>
+
+            </form>
+        </div>
+
+        <!-- BEJELENTKEZÉS -->
+        <div id="bejelentkezes" class="form-box">
+            <form action="">
+
+                <i class="bi bi-person fs-5" style="color: white;"></i>
+                <label class="label fs-5">Felhasználónév</label><br>
+                <input type="text" placeholder=" Add meg a felhasználóneved" class="input">
+                <br><br>
+
+                <i class="bi bi-shield-lock fs-5" style="color: white;"></i>
+                <label class="label fs-5">Jelszó</label><br>
+                <input type="password" placeholder=" Add meg a jelszavad" class="input">
+                <br><br><br>
+
+                <div>
+                <button type="button" id="login-btn" class="btn" style="background-color: yellow; text-align: center;"><i class="bi bi-box-arrow-in-right fs-5"></i>Bejelentkezés</button>
+</div>
+                <br><br>
+
+                <p style="text-align: center; color: white;">Még nincs fiókod? <a href="#" id="regisztracioLink" style="color: yellow;">Regisztráció</a></p>
+
             </form>
         </div>
 
     </div>
+
+
+</div>
+<script src="../javascript/signin.js"></script>
 
 
 </body>

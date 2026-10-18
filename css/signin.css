@@ -113,6 +113,66 @@ body {
     font-size: 20px;
 }
 
+#login-btn{
+    text-align: center;
+    margin-right: 25px;
+    text-align: center;
+    width: 400px;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.liHover:hover {
+    transition: 0.5s;
+    background-color: rgb(36, 36, 36);
+    border-radius: 15%;
+    margin: 15px;
+}
+
+
+.form-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.form-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#regisztracio {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#bejelentkezes {
+    position: absolute;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-container.login-mode #regisztracio {
+    position: absolute;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-container.login-mode #bejelentkezes {
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 
 
 
