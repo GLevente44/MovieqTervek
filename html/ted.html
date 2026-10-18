@@ -3,62 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ted - Movieq</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Vízióküldetés - Movieq</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/fooldal.css">
-    <link rel="icon"type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/ted.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
 </head>
-<body class="d-flex flex-column min-vh-100 bg-black text-white">
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVIGÁCIÓ -->
     <nav class="navbar navbar-expand-lg bg-black">
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-        <!-- REGISZTRÁCIÓ -->
-        <a class="navbar-brand" href="#">
-            <img src="../img/logo.png" alt="Movieq" id="logo" style="background-color: black;">
-        </a>
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.png" alt="Movieq" id="logo">
+            </a>
 
-        <!-- Középső rész -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <button class="navbar-toggler bg-light" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+            <div class="collapse navbar-collapse justify-content-center"
+                id="navbarSupportedContent">
 
-                <!-- LENYÍLÓ MENÜ -->
-                <li class="nav-item dropdown ms-3">
-                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">☰ Menü</a>   
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="fooldal.html">Főoldal</a></li>
-                        <li><a class="dropdown-item" href="filmek.html">Filmek</a></li>
-                        <li><a class="dropdown-item" href="sorozatok.html">Sorozatok</a></li>
-                        <li><a class="dropdown-item" href="ajanlasok.html">Halloweeni ajánlások</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="kedvencek.html">Kedvenceim</a></li>
-                    </ul>
-                </li>
+                <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
 
-                <!-- Kereső -->
-                <form class="d-flex ms-3" role="search">
-                    <input class="form-control me-2 fs-5" type="search" placeholder="Keresés..." aria-label="Search">
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle text-white fs-5"
+                            href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ☰ Menü
+                        </a>
 
-                    <button class="btn btn-outline-light" type="submit">
-                        &#128270;
-                    </button>
-                </form>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="fooldal.html">Főoldal</a></li>
+                            <li><a class="dropdown-item" href="filmek.html">Filmek</a></li>
+                            <li><a class="dropdown-item" href="sorozatok.html">Sorozatok</a></li>
+                            <li><a class="dropdown-item" href="ajanlasok.html">Halloweeni ajánlások</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="kedvencek.html">Kedvenceim</a></li>
+                        </ul>
+                    </li>
 
-            </ul>
+                    <li class="nav-item">
+                        <form class="d-flex ms-3" role="search">
+                            <input
+                                class="form-control me-2 fs-5 bg-dark text-white border-secondary"
+                                type="search"
+                                placeholder="Keresés..."
+                                aria-label="Keresés">
+
+                            <button class="btn btn-outline-light" type="submit">
+                                🔍
+                            </button>
+                        </form>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <i class="bi bi-person-fill text-white fs-4 me-2"></i>
+                <a class="nav-link fw-bold text-white fs-5"
+                    href="../html/signin.html">
+                    Regisztráció
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <hr class="m-0"
+        style="color: #fffb00; border-top: 2px solid #fffb00; opacity: 1;">
+
+    <main class="container py-4">
+
+        <!-- FILM ADATAI -->
+        <div class="row align-items-end mb-3">
+
+            <div class="col-12 col-md-7">
+                <h1 class="fw-bold mb-1 text-warning display-5">
+                    Ted
+                </h1>
+
+                <div class="text-secondary fs-6 d-flex flex-wrap align-items-center gap-2">
+                    <span>Eredeti cím: <em>Ted</em></span>
+                    <span>•</span>
+                    <span>Film</span>
+                    <span>•</span>
+                    <span>2012</span>
+                    <span>•</span>
+                    <span class="badge border border-secondary text-secondary">16</span>
+                    <span>•</span>
+                    <span>1h 46m</span>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-5 mt-3 mt-md-0">
+                <div class="d-flex justify-content-md-end align-items-center gap-4">
+
+                    <div class="text-center">
+                        <div class="text-uppercase text-secondary small fw-bold">
+                            Movieq Értékelés
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-center gap-1 fs-5">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <span class="fw-bold text-white">8.1</span>
+                            <span class="text-secondary fs-6">/10</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-uppercase text-secondary small fw-bold">
+                            Értékeld
+                        </div>
+
+                        <button class="btn btn-link text-primary p-0 text-decoration-none d-flex align-items-center gap-1 fs-5 mx-auto">
+                            <i class="bi bi-star text-primary"></i>
+                            <span class="fw-bold">Értékelés</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
-        <!-- LOGO - JOBB OLDAL -->
-        <i class="bi bi-person-fill text-white fs-4"></i>
-        <a class="nav-link fw-bold text-white fs-5" href="../html/signin.html">Regisztráció</a>
+        <!-- KÉPEK KÜLSŐ KERETE -->
+        <div class="media-wrapper">
 
-    </div>
-</nav>
-<hr style="color: yellow;">
-<h2 style="text-align: center; color: #ffee00;">Ted</h2>
+            <div class="media-section">
 
-<body>
-    
+                <!-- POSZTER -->
+                <div class="poster-box">
+                    <img src="../img/tedposzter.jpg" alt="Ted poszter">
+                </div>
+
+                <!-- TRAILER -->
+                <div class="trailer-box">
+
+                    <img
+                        src="../img/tedtrailer2.jpg"
+                        alt="Ted előzetes képe"
+                        class="trailer-bg-img">
+
+                    <div class="trailer-overlay">
+                        <button
+                            type="button"
+                            class="btn btn-outline-light rounded-circle p-3 mb-2"
+                            aria-label="Előzetes lejátszása">
+                            <a href="https://youtu.be/1xSYmg_kpMY?si=ayBAgPX3m1Xy1gu2" target="_blank">
+                            <i class="bi bi-play-fill fs-2"></i>
+                            </a>
+                        </button>
+
+                        <div class="h5 fw-bold mb-1">
+                            Előzetes lejátszása
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- MŰFAJOK -->
+        <div class="d-flex flex-wrap gap-2 mb-4">
+            <a href="#" class="genre-badge">Vígjáték</a>
+            <a href="#" class="genre-badge">Humor</a>
+            <a href="#" class="genre-badge">Dráma</a>
+        </div>
+
+        <!-- LEÍRÁS ÉS GOMBOK -->
+        <div class="row g-4">
+
+            <div class="col-12 col-lg-8">
+                <p class="fs-5 text-light mb-4">
+                    Egy férfinak, akinek gyermekkori vágya, hogy életre keltse mackóját, most el kell döntenie, hogy ez a barátság fontosabb-e számára, mint a barátnője.
+                </p>
+
+                <hr class="border-secondary my-4">
+
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                    <span class="fw-bold text-white fs-5">Sztárok:</span>
+
+                    <div class="d-flex flex-wrap gap-2 fs-5">
+                        <a href="#" class="cast-link">Mark Wahlberg</a>
+                        <span class="text-secondary">•</span>
+                        <a href="#" class="cast-link">Mila Kunis</a>
+                        <span class="text-secondary">•</span>
+                        <a href="#" class="cast-link">Seth MacFarlane</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="d-grid gap-2">
+
+                    <button
+                        class="btn btn-watchlist py-2 d-flex align-items-center justify-content-center gap-2"
+                        id="watchlistBtn">
+                        <i class="bi bi-plus-lg fs-5"></i>
+                        <span>Hozzáadás a kedvencekhez</span>
+                    </button>
+
+                    <button
+                        class="btn btn-watched py-2 d-flex align-items-center justify-content-center gap-2"
+                        id="watchedBtn">
+                        <span>Megjegyzés</span>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

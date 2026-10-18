@@ -1,0 +1,203 @@
+/* ALAPBEÁLLÍTÁSOK */
+body {
+    background-color: black;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* MÉDIA SZEKCIÓ */
+.media-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 0 1.5rem 0;
+}
+
+/* POSZTER */
+.poster-box {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 280px;
+}
+
+.poster-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* TRAILER */
+.trailer-box {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    height: 280px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+}
+
+/* TRAILER HÁTTÉRKÉP */
+.trailer-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+    z-index: 1;
+}
+
+/* TRAILER FELIRAT ÉS LEJÁTSZÁS */
+.trailer-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.95) 10%,
+        transparent 100%
+    );
+}
+
+/* OLDALSÓ GOMBOK */
+.side-buttons-box {
+    flex: 0 0 22%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-media-btn {
+    background-color: #181818;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.side-media-btn:hover {
+    background-color: #252525;
+    border-color: #fffb00;
+    color: #ffffff;
+}
+
+/* MŰFAJ CÍMKÉK */
+.genre-badge {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border: 1px solid #333333;
+    border-radius: 50px;
+    padding: 6px 16px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.genre-badge:hover {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #fffb00;
+}
+
+/* SZEREPLŐK LINKJEI */
+.cast-link {
+    color: #5799ef;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cast-link:hover {
+    text-decoration: underline;
+    color: #8bb2f5;
+}
+
+/* FIGYELŐLISTA GOMB */
+.btn-watchlist {
+    background-color: #fffb00;
+    color: #000000;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-watchlist:hover {
+    background-color: #d6d200;
+    color: #000000;
+}
+
+/* MEGTEKINTETT GOMB */
+.btn-watched {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #444444;
+    font-weight: 500;
+}
+
+.btn-watched:hover {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+/* AKTÍV SIKERÁLLAPOT */
+.btn-active-success {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+/* MOBILNÉZET */
+@media (max-width: 576px) {
+    .media-section {
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .poster-box {
+        flex: 0 0 110px;
+        width: 110px;
+        height: 165px;
+    }
+
+    .trailer-box {
+        height: 165px;
+    }
+
+    .trailer-overlay {
+        padding: 8px;
+    }
+
+    .trailer-overlay .btn {
+        padding: 5px !important;
+    }
+
+    .trailer-overlay .h5 {
+        font-size: 0.9rem;
+    }
+}
