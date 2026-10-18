@@ -8,16 +8,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/fooldal.css">
-    <link rel="icon"type="image/png" href="../img/logo.png">
+    <link rel="icon" type="image/png" href="../img/logo.png">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100 bg-black text-white">
     
 <nav class="navbar navbar-expand-lg bg-black">
     <div class="container-fluid">
 
-        <!-- REGISZTRÁCIÓ - BAL OLDAL -->
+        <!-- REGISZTRÁCIÓ -->
         <a class="navbar-brand" href="#">
-            <img src="../img/logo.png"alt="Movieq"id="logo"style="background-color: black;">
+            <img src="../img/logo.png" alt="Movieq" id="logo" style="background-color: black;">
         </a>
 
         <!-- Középső rész -->
@@ -25,17 +25,22 @@
 
             <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
 
-                <li class="nav-item ms-3">
-                    <a class="nav-link active text-white fs-5" href="#fooldal.html">Főoldal</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link text-white fs-5"href="#"role="button"data-bs-toggle="dropdown"aria-expanded="false">☰ Menü</a>   
+                <!-- LENYÍLÓ MENÜ -->
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">☰ Menü</a>   
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="fooldal.html">Főoldal</a></li>
+                        <li><a class="dropdown-item" href="filmek.html">Filmek</a></li>
+                        <li><a class="dropdown-item" href="sorozatok.html">Sorozatok</a></li>
+                        <li><a class="dropdown-item" href="ajanlasok.html">Halloweeni ajánlások</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="kedvencek.html">Kedvenceim</a></li>
+                    </ul>
                 </li>
 
                 <!-- Kereső -->
                 <form class="d-flex ms-3" role="search">
-                    <input class="form-control me-2 fs-5"type="search"placeholder="Keresés..."aria-label="Search">
+                    <input class="form-control me-2 fs-5" type="search" placeholder="Keresés..." aria-label="Search">
 
                     <button class="btn btn-outline-light" type="submit">
                         &#128270;
@@ -205,99 +210,168 @@
 
   <h3 style="color: yellow; margin-left:150px; margin-top: 150px;">| Film válogatások</h3><br>
   
-  <div class="row kartyak g-3">
+  <div class="d-flex flex-row flex-nowrap overflow-x-auto kartyak g-3 container-fluid px-5 pb-3">
   <!-- 1. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/denever.jpg" class="card-img-top" alt="Batman 2022 poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>3.0</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/denever.jpg" class="card-img-top" alt="Batman 2022 poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>3.0</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Batman 2022</h5>
         </div>
-        <h5 class="card-title">Batman 2022</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">HBO Max</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">Apple TV</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 2. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/jatek.jpg" class="card-img-top" alt="Toy Story poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.2</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/jatek.jpg" class="card-img-top" alt="Toy Story poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.2</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Toy Story</h5>
         </div>
-        <h5 class="card-title">Toy Story</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Disney+</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">Apple TV</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 3. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/avatar.jpg" class="card-img-top" alt="Avatar: Fire And Ash poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.1</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/avatar.jpg" class="card-img-top" alt="Avatar: Fire And Ash poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.1</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Avatar: Fire And Ash</h5>
         </div>
-        <h5 class="card-title">Avatar: Fire And Ash</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Mozi premier</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">Disney+</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 4. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/ted.jpg" class="card-img-top" alt="Ted poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.5</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <a href="ted.html">
+      <img  src="../img/ted.jpg" class="card-img-top" alt="Ted poszter" style="height: 320px; object-fit: cover;">
+      </a>
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.5</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Ted</h5>
         </div>
-        <h5 class="card-title">Ted</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">SkyShowtime</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 5. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/nagyfiuk.jpg" class="card-img-top" alt="Grown ups kisképe">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>5.0</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/nagyfiuk.jpg" class="card-img-top" alt="Grown ups kisképe" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>5.0</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Grown ups</h5>
         </div>
-        <h5 class="card-title">Grown ups</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">Prime Video</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 6. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/venom.jpg" class="card-img-top" alt="Venom poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.6</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/venom.jpg" class="card-img-top" alt="Venom poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.6</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Venom</h5>
         </div>
-        <h5 class="card-title">Venom</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+            <li><a class="dropdown-item" href="#" target="_blank">HBO Max</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -306,99 +380,159 @@
 
 <h3 style="color: yellow; margin-left:150px; margin-top: 150px;">| Top sorozatok</h3><br>
 
-<div class="row kartyak g-3">
+<div class="d-flex flex-row flex-nowrap overflow-x-auto kartyak g-3 container-fluid px-5 mb-5 pb-3">
 <!-- 1. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/loki.jpg" class="card-img-top" alt="Loki poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>3.4</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/loki.jpg" class="card-img-top" alt="Loki poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>3.4</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Loki</h5>
         </div>
-        <h5 class="card-title">Loki</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Disney+</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 2. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/zombi.jpg" class="card-img-top" alt="All Of Us Are Dead poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.0</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/zombi.jpg" class="card-img-top" alt="All Of Us Are Dead poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.0</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">All Of Us Are Dead</h5>
         </div>
-        <h5 class="card-title">All Of Us Are Dead</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 3. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/polip.jpg" class="card-img-top" alt="Squid Game poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>5.0</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/polip.jpg" class="card-img-top" alt="Squid Game poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>5.0</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Squid Game</h5>
         </div>
-        <h5 class="card-title">Squid Game</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 4. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/szerda.jpg" class="card-img-top" alt="Wednesday poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>2.9</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/szerda.jpg" class="card-img-top" alt="Wednesday poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>2.9</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">Wednesday</h5>
         </div>
-        <h5 class="card-title">Wednesday</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 5. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/esernyo.jpg" class="card-img-top" alt="The Umbrella Academy kisképe">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.3</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/esernyo.jpg" class="card-img-top" alt="The Umbrella Academy kisképe" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.3</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">The Umbrella Academy</h5>
         </div>
-        <h5 class="card-title">The Umbrella Academy</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Netflix</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 6. Kártya -->
-  <div class="col-auto">
-    <div class="card bg-dark text-white" style="width: 14rem;">
-      <img src="../img/fiuk.jpg" class="card-img-top" alt="The Boys poszter">
-      <div class="card-body text-center">
-        <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-          <i class="bi bi-star-fill text-warning"></i>
-          <span>4.6</span>
-          <i class="bi bi-star text-warning"></i>
+  <div class="flex-shrink-0">
+    <div class="card bg-dark text-white h-100" style="width: 14rem;">
+      <img src="../img/fiuk.jpg" class="card-img-top" alt="The Boys poszter" style="height: 320px; object-fit: cover;">
+      <div class="card-body text-center d-flex flex-column justify-content-between">
+        <div>
+          <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <i class="bi bi-star-fill text-warning"></i>
+            <span>4.6</span>
+            <i class="bi bi-star text-warning"></i>
+          </div>
+          <h5 class="card-title">The Boys</h5>
         </div>
-        <h5 class="card-title">The Boys</h5>
-        <a href="#" class="btn btn-outline-light">Watch options</a>
+        <!-- Watch options Dropdown -->
+        <div class="dropdown mt-3">
+          <button class="btn btn-outline-light dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Watch options
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#" target="_blank">Prime Video</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
